@@ -1,0 +1,200 @@
+.container {
+  display: flex;
+  background-color: #d5e4eb;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  min-height: 700px;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.wrapper--fullscreen {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/**** LOGIN GENERAL ****/
+.login--form,
+.login--banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**** LOGIN FORM ****/
+.login--form {
+  width: 40%;
+  user-select: none;
+}
+.login--form-wrapper {
+  width: 300px;
+}
+.login--form-title {
+  font-size: 30px;
+  color: #5f5f5f;
+}
+.login--form-image {
+  display: flex;
+  justify-content: center;
+}
+.login--form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0px;
+}
+.login--form-input {
+  background: #faf9fb;
+  font-size: 16px;
+  height: 40px;
+  padding: 0px 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin-top: 4px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+}
+.login--form-input:focus {
+  border-color: #fcac20;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+
+.login--form-button {
+  background: #fcac20;
+  width: 100%;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 300;
+  padding: 8px 0px;
+  color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login--form-button:hover {
+  border-color: #fcac20;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+
+.login--form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px;
+}
+.login--form-remind {
+  font-size: 14px;
+  font-weight: 300;
+}
+.login--form-link {
+  text-decoration: none;
+  color: #1a7eb0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.login--form-toggle {
+  text-decoration: underline;
+  color: #1a7eb0;
+  font-size: 14px;
+  font-weight: 500;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.login--form-alert {
+  font-size: 12px;
+  margin: 4px 0px;
+  color: #949494;
+}
+
+/**** LOGIN BANNER ****/
+.login--banner {
+  position: relative;
+  width: 60%;
+  background-image: url(https://image.freepik.com/free-photo/headphones-african-american-woman-s-portrait-isolated-dark-studio-background-multicolored-neon-light-beautiful-female-model-concept-human-emotions-facial-expression-sales-ad-fashion_155003-34470.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.login--banner-wrapper {
+  position: relative;
+  color: #fff;
+  width: 400px;
+  z-index: 1;
+}
+.login--banner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.login--banner-title {
+  font-size: 40px;
+  margin: 32px 0px;
+}
+.login--banner-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.login--banner-description aside {
+  width: 300px;
+  font-size: 20px;
+  margin: 16px 0px;
+}
+.login--banner-promo {
+  font-size: 16px !important;
+  color: #cfcfcf;
+}
+
+/**** RESPONSIVE DESIGN ****/
+
+@media (max-width: 1200px) {
+  .login--form-wrapper,
+  .login--banner-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .login--form,
+  .login--banner {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .login--form {
+    width: 80%;
+  }
+  .login--banner {
+    display: none;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    border: 0;
+    border-radius: 0;
+  }
+}

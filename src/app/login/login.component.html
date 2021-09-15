@@ -1,0 +1,89 @@
+<app-navbar [fullscreen]="fullscreen"></app-navbar> <!-- NAVBAR COMPONENT -->
+<div class="container">
+  <div [ngClass]="fullscreen ? 'wrapper--fullscreen' : 'wrapper'">
+    <div class="login--form">
+      <div class="login--form-wrapper">
+        <div class="login--form-image">
+          <app-logo [width]="160"></app-logo> <!-- LOGO COMPONENT -->
+        </div>
+        <form>
+          <h3 class="login--form-title">
+            Registrarme con mi
+            cuenta de Amazon
+          </h3>
+          <div class="login--form-control">
+            <label for="fullname">Nombre completo</label>
+            <input type="text" id="fullname" class="login--form-input">
+          </div>
+          <div class="login--form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="login--form-input">
+          </div>
+          <div class="login--form-control">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" class="login--form-input">
+            <div class="login--form-alert">
+              Las contraseñas deben tener al menos 6 caracteres.
+            </div>
+          </div>
+          <div class="login--form-control">
+            <button class="login--form-button">
+              Registrarme
+            </button>
+          </div>
+        </form>
+        <div class="login--form-footer">
+          <div class="login--form-remind">
+            <input type="checkbox" id="remind"/>
+            <label for="remind">Recordar mis datos</label>
+          </div>
+          <div>
+            <a
+              href="https://www.amazon.com/ap/register?clientContext=131-4330232-2651961&openid.pape.max_auth_age=900&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&siteState=audibleid.userType%3Damzn%2Caudibleid.mode%3Did_res%2CclientContext%3D134-1737451-9535634%2CsourceUrl%3Dhttps%253A%252F%252Fwww.audible.com%252Fsubscription%252Fconfirmation%253Fref%25253Da_ep_espano_c2_member_cta%252526membershipAsin%25253DB076FLV3HT%252526%2Csignature%3DnxlatSWlR2YwwzTywj2F3QXulBKj2F8j3D&marketPlaceId=AF2M0KC94RCEA&pageId=amzn_audible_bc_us&openid.return_to=https%3A%2F%2Fwww.audible.com%2Fsubscription%2Fconfirmation%3Fref%3Da_ep_espano_c2_member_cta%26membershipAsin%3DB076FLV3HT%26%3D&prevRID=RE9B3KMDYQNRDXK524NX&openid.assoc_handle=audible_shared_web_us&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+              class="login--form-link"
+            >
+              Soy nuevo en Amazon
+            </a>
+          </div>
+        </div>
+
+        <div class="login--form-footer">
+          <div>
+            <button
+              class="login--form-toggle"
+              (click)="toggleScreen()"
+            >
+              {{(fullscreen ? 'Formulario pequeño':'Formulario en pantalla completa')}}
+            </button>
+          </div>
+          <!-- <div>
+            Desarrollado por <a href="https://josechirinos.dev/">@JoseChirinos</a>
+          </div> -->
+        </div>
+      </div> <!-- end login--banner-wrapper -->
+    </div>
+    <div class="login--banner">
+      <div class="login--banner-wrapper">
+        <h1 class="login--banner-title">
+          Regístrate y obtén <br>
+          un audiolibro gratis
+        </h1>
+        <div class="login--banner-info">
+          <div class="login--banner-description">
+            <aside>
+              Escuchar en tus audiolibros<br>
+              favoritos es más fácil<br>
+              que nunca.
+            </aside>
+  
+            <aside class="login--banner-promo">
+              Al registrarte, tu membresia incluye<br>
+              30 días con 1 audiolibro + Audible<br>
+              Originales selectos totalmente gratis.
+            </aside>
+          </div>
+        </div>
+      </div> <!-- end login--banner-wrapper -->
+    </div>
+  </div>
+</div>
