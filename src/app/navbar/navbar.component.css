@@ -1,5 +1,7 @@
+.navbar--content {
+  height: 70px;
+}
 .navbar {
-  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -36,12 +38,36 @@
   background: #f9ac20;
 }
 
+.navbar--fullscreen {
+  height: 0px;
+}
+.navbar--fullscreen .navbar {
+  position: fixed;
+}
 .navbar--fullscreen a {
   color: #fff !important;
 }
 
+@media (max-width: 450px) {
+  .navbar--content {
+    height: auto;
+  }
+  .navbar--menu {
+    padding: 0px 4px;
+  }
+  .navbar {
+    font-size: 12px;
+  }
+}
 @media (max-width: 750px) {
   .navbar--fullscreen a {
     color: #000 !important;
+  }
+  .navbar {
+    justify-content: center;
+    background: #fff;
+  }
+  .navbar--fullscreen {
+    height: 70px;
   }
 }
